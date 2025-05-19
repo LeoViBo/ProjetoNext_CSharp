@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaMenu));
             menuStrip1 = new MenuStrip();
             homeToolStripMenuItem = new ToolStripMenuItem();
             clientesToolStripMenuItem = new ToolStripMenuItem();
@@ -44,6 +45,9 @@
             label_NewClientePerfil = new Label();
             button_AdicionarCliente = new Button();
             comboBox_NewClientePerfil = new ComboBox();
+            label_PerfilConservador = new Label();
+            label_PerfilModerado = new Label();
+            label_PerfilAgressivo = new Label();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView_Clientes).BeginInit();
             SuspendLayout();
@@ -197,11 +201,44 @@
             comboBox_NewClientePerfil.TabIndex = 10;
             comboBox_NewClientePerfil.Visible = false;
             // 
+            // label_PerfilConservador
+            // 
+            label_PerfilConservador.AutoSize = true;
+            label_PerfilConservador.Font = new Font("Segoe UI", 10F);
+            label_PerfilConservador.Location = new Point(5, 83);
+            label_PerfilConservador.Name = "label_PerfilConservador";
+            label_PerfilConservador.Size = new Size(213, 345);
+            label_PerfilConservador.TabIndex = 11;
+            label_PerfilConservador.Text = resources.GetString("label_PerfilConservador.Text");
+            // 
+            // label_PerfilModerado
+            // 
+            label_PerfilModerado.AutoSize = true;
+            label_PerfilModerado.Font = new Font("Segoe UI", 10F);
+            label_PerfilModerado.Location = new Point(218, 83);
+            label_PerfilModerado.Name = "label_PerfilModerado";
+            label_PerfilModerado.Size = new Size(270, 345);
+            label_PerfilModerado.TabIndex = 12;
+            label_PerfilModerado.Text = resources.GetString("label_PerfilModerado.Text");
+            // 
+            // label_PerfilAgressivo
+            // 
+            label_PerfilAgressivo.AutoSize = true;
+            label_PerfilAgressivo.Font = new Font("Segoe UI", 10F);
+            label_PerfilAgressivo.Location = new Point(484, 83);
+            label_PerfilAgressivo.Name = "label_PerfilAgressivo";
+            label_PerfilAgressivo.Size = new Size(310, 345);
+            label_PerfilAgressivo.TabIndex = 13;
+            label_PerfilAgressivo.Text = resources.GetString("label_PerfilAgressivo.Text");
+            // 
             // TelaMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label_PerfilAgressivo);
+            Controls.Add(label_PerfilModerado);
+            Controls.Add(label_PerfilConservador);
             Controls.Add(comboBox_NewClientePerfil);
             Controls.Add(button_AdicionarCliente);
             Controls.Add(label_NewClientePerfil);
@@ -240,5 +277,8 @@
         private Label label_NewClientePerfil;
         private Button button_AdicionarCliente;
         private ComboBox comboBox_NewClientePerfil;
+        private Label label_PerfilConservador;
+        private Label label_PerfilModerado;
+        private Label label_PerfilAgressivo;
     }
 }

@@ -1,5 +1,6 @@
 using CP3.Estrutura.Controller;
 using CP3.Estrutura.Repository;
+using CP3.Estrutura.UI;
 
 namespace CP3
 {
@@ -19,7 +20,12 @@ namespace CP3
             if (validacao)
             {
                 MessageBox.Show("Login realizado com sucesso!");
-                // Aqui você pode adicionar a lógica para abrir a próxima tela ou fazer o que for necessário após o login.
+                TelaMenu menu = new TelaMenu();
+                menu.Show();       // Abre a nova janela
+                this.Hide();       // Oculta a tela de login
+
+                // Encerra tudo quando TelaMenu for fechada
+                menu.FormClosed += (s, args) => this.Close();
             }
             else
             {

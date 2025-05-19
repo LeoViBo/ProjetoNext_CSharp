@@ -120,6 +120,57 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="label_PerfilConservador.Text" xml:space="preserve">
+    <value>1. Conservador
+Objetivo: 
+Segurança e preservação 
+do capital.
+
+Tolerância ao risco: 
+Baixíssima.
+
+Investimentos comuns: 
+Poupança, CDB, Tesouro 
+Selic, fundos de renda fixa.
+
+Características: 
+Prefere estabilidade a 
+rentabilidade alta.</value>
+  </data>
+  <data name="label_PerfilModerado.Text" xml:space="preserve">
+    <value>2. Moderado
+Objetivo: 
+Equilíbrio entre segurança
+e retorno.
+
+Tolerância ao risco: 
+Média.
+
+Investimentos comuns: 
+Renda fixa, fundos multimercado, 
+ações de empresas consolidadas.
+
+Características: 
+Aceita alguma oscilação para 
+buscar rendimentos melhores.</value>
+  </data>
+  <data name="label_PerfilAgressivo.Text" xml:space="preserve">
+    <value>3. Agressivo
+Objetivo: 
+Alta rentabilidade, 
+mesmo com riscos elevados.
+
+Tolerância ao risco: 
+Alta.
+
+Investimentos comuns: 
+Ações, fundos de ações, criptomoedas, 
+investimentos internacionais.
+
+Características: 
+Foca no longo prazo e 
+suporta perdas temporárias.</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>54</value>
   </metadata>

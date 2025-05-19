@@ -1,4 +1,4 @@
-﻿using CP3.Estrutura.Repository;
+﻿using CP3.Estrutura.Controller;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +23,7 @@ namespace CP3.Estrutura.UI
         private void AtualizarLabelLogin()
         {
             // Fazer Depois:
-            // Trocar nome da label baseado no rm que foi preenchido no login
+            // Trocar nome da label baseado no rm que foi preenchido no login 
         }
         private void HideUI()
         {
@@ -35,6 +35,9 @@ namespace CP3.Estrutura.UI
             textBox_NewClienteNome.Hide();
             comboBox_NewClientePerfil.Hide();
             button_AdicionarCliente.Hide();
+            label_PerfilAgressivo.Hide();  
+            label_PerfilModerado.Hide();
+            label_PerfilConservador.Hide();
         }
         private void verClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -58,12 +61,16 @@ namespace CP3.Estrutura.UI
         {
             HideUI();
             label_PaginaAtual.Text = "Informações sobre Perfils";
+            label_PerfilAgressivo.Show();
+            label_PerfilModerado.Show();
+            label_PerfilConservador.Show();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HideUI();
             label_PaginaAtual.Text = "Sair";
+            Application.Exit();
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -75,7 +82,7 @@ namespace CP3.Estrutura.UI
         }
         private void CarregarClientes()
         {
-            var repo = new ClienteRepository();
+            var repo = new ClienteController();
             var lista = repo.ListarClientes();
 
             dataGridView_Clientes.DataSource = lista;
@@ -92,8 +99,8 @@ namespace CP3.Estrutura.UI
                 return;
             }
 
-            var repo = new ClienteRepository();
-            repo.InserirCliente(nome, tipoPerfil);
+            var repo = new ClienteController();
+            repo.AdicionarCliente(nome, tipoPerfil);
 
             MessageBox.Show($"O usuário {nome} foi adicionado com sucesso!");
         }
