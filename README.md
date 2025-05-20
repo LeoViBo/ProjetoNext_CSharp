@@ -1,0 +1,93 @@
+# Documentação do Protótipo Next
+
+## Nome do Sistema e Propósito
+
+**Protótipo Next** é um sistema desenvolvido em C# com Windows Forms e Oracle Database, com o objetivo de gerenciar usuários e clientes. O sistema possui funcionalidades de login, exibição e cadastro de clientes com perfis de investimento.
+Regras de Negócio  
+
+- O sistema exige que o usuário realize login com RM e senha válidos cadastrados no banco.  
+- Após o login, o nome do usuário é exibido na tela principal.  
+- O sistema permite visualizar todos os clientes cadastrados.  
+- É possível adicionar a base de dados um novo cliente informando nome e perfil de investimento.
+  - Perfis de investimento disponíveis: Agressivo, Moderado e Conservador.
+- O sistema mostra informações sobre perfis de investimento
+
+## Descrição das Telas
+### Tela de Login
+
+- Inputs: RM, Senha  
+- Ação: Autentica o usuário.  
+- Validação com mensagem em caso de falha.  
+- Em caso de sucesso, abre a tela do menu.
+- Login cadastrado
+  - RM: 551726
+  - Senha: 200398
+
+### Tela de Menu Principal
+
+- Saudação ao usuário logado.  
+- Menu com as opções:  
+  - Home  
+  - Ver Clientes  
+  - Adicionar Cliente  
+  - Informações sobre Perfis  
+  - Sair  
+
+#### Tela de Visualização de Clientes
+Exibe uma tabela (DataGridView) com os clientes cadastrados.  
+
+#### Tela de Adição de Cliente
+Inputs: Nome do Cliente, Perfil (seleção por ComboBox)  
+Botão para confirmar o cadastro.
+
+#### Tela de Informações sobre Perfis
+Explicação textual sobre os tipos de perfil de investimento.
+
+## Oracle Database: Estrutura das Tabelas
+
+### Tabela: Usuarios
+| Coluna | Tipo de dado	| Restrições |
+| ------ | ------------ | ----------- |
+| ID | NUMBER	| PRIMARY KEY |
+| RM | NUMBER	| NOT NULL |
+| Nome | VARCHAR2(100)	| NOT NULL |
+| Senha	| VARCHAR2(20) | NOT NULL |
+
+### Tabela: Clientes
+| Coluna | Tipo de dado	| Restrições |
+| ------ | ------------ | ----------- |
+| ID | NUMBER	| PRIMARY KEY |
+| Nome | VARCHAR2(100) | NOT NULL |
+| Perfil | VARCHAR2(20) | NOT NULL |
+
+## Diagrama do Fluxo de Arquitetura
+
+**UI Layer:**  
+TelaLogin  
+TelaMenu  
+↓  
+**Controller Layer:**  
+UsuarioController  
+ClienteController  
+↓  
+**Repository Layer:**  
+UsuarioRepository  
+ClienteRepository  
+↓  
+**Database:**  
+Oracle Database (Tabelas: Usuarios, Clientes)  
+
+## Tecnologias Utilizadas
+
+- Linguagem: C#  
+- Framework: Windows Forms (.NET Framework)  
+- Banco de Dados: Oracle 11g  
+- IDE: Visual Studio  
+- Gerenciamento de Projeto: Git + GitHub  
+
+## Pontos de Melhoria para o 2º Semestre
+
+- Implementar sistema de autenticação com criptografia de senhas.  
+- Adicionar validação de campos com mensagens mais descritivas.
+- Adicionar visualização de perfil com mais detalhes
+- Form para inserir dados sobre o cliente, e então gerar o tipo de perfil correspondente
