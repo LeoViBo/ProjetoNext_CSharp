@@ -1,10 +1,10 @@
-﻿using Oracle.ManagedDataAccess.Client;
+﻿using CP3.Estrutura.Model;
+using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CP3.Estrutura.Model;
 
 namespace CP3.Estrutura.Repository
 {

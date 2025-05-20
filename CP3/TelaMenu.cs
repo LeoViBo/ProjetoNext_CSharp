@@ -1,23 +1,19 @@
 ﻿using CP3.Estrutura.Controller;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Web;
 
 namespace CP3.Estrutura.UI
 {
     public partial class TelaMenu : Form
     {
-        public TelaMenu()
+        public TelaMenu(string nome)
         {
             InitializeComponent();
             AtualizarLabelLogin();
+            HideUI();
+            labelHome_NomeUsuario.Text = nome + "!";
             label_PaginaAtual.Text = "Home";
+            labelHome_Bemvindo.Show();
+            labelHome_NomeUsuario.Show();
         }
 
         private void AtualizarLabelLogin()
@@ -35,7 +31,7 @@ namespace CP3.Estrutura.UI
             textBox_NewClienteNome.Hide();
             comboBox_NewClientePerfil.Hide();
             button_AdicionarCliente.Hide();
-            label_PerfilAgressivo.Hide();  
+            label_PerfilAgressivo.Hide();
             label_PerfilModerado.Hide();
             label_PerfilConservador.Hide();
         }

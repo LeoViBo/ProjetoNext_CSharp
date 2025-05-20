@@ -58,14 +58,15 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { homeToolStripMenuItem, clientesToolStripMenuItem, informaçõesSobrePerfilsToolStripMenuItem, sairToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 28);
+            menuStrip1.Padding = new Padding(5, 2, 0, 2);
+            menuStrip1.Size = new Size(700, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // homeToolStripMenuItem
             // 
             homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            homeToolStripMenuItem.Size = new Size(64, 24);
+            homeToolStripMenuItem.Size = new Size(52, 20);
             homeToolStripMenuItem.Text = "Home";
             homeToolStripMenuItem.Click += homeToolStripMenuItem_Click;
             // 
@@ -73,34 +74,34 @@
             // 
             clientesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { verClientesToolStripMenuItem, adicionarClienteToolStripMenuItem });
             clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            clientesToolStripMenuItem.Size = new Size(75, 24);
+            clientesToolStripMenuItem.Size = new Size(61, 20);
             clientesToolStripMenuItem.Text = "Clientes";
             // 
             // verClientesToolStripMenuItem
             // 
             verClientesToolStripMenuItem.Name = "verClientesToolStripMenuItem";
-            verClientesToolStripMenuItem.Size = new Size(206, 26);
+            verClientesToolStripMenuItem.Size = new Size(165, 22);
             verClientesToolStripMenuItem.Text = "Ver Clientes";
             verClientesToolStripMenuItem.Click += verClientesToolStripMenuItem_Click;
             // 
             // adicionarClienteToolStripMenuItem
             // 
             adicionarClienteToolStripMenuItem.Name = "adicionarClienteToolStripMenuItem";
-            adicionarClienteToolStripMenuItem.Size = new Size(206, 26);
+            adicionarClienteToolStripMenuItem.Size = new Size(165, 22);
             adicionarClienteToolStripMenuItem.Text = "Adicionar Cliente";
             adicionarClienteToolStripMenuItem.Click += adicionarClienteToolStripMenuItem_Click;
             // 
             // informaçõesSobrePerfilsToolStripMenuItem
             // 
             informaçõesSobrePerfilsToolStripMenuItem.Name = "informaçõesSobrePerfilsToolStripMenuItem";
-            informaçõesSobrePerfilsToolStripMenuItem.Size = new Size(191, 24);
+            informaçõesSobrePerfilsToolStripMenuItem.Size = new Size(152, 20);
             informaçõesSobrePerfilsToolStripMenuItem.Text = "Informações sobre perfils";
             informaçõesSobrePerfilsToolStripMenuItem.Click += informaçõesSobrePerfilsToolStripMenuItem_Click;
             // 
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(48, 24);
+            sairToolStripMenuItem.Size = new Size(38, 20);
             sairToolStripMenuItem.Text = "Sair";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
@@ -108,9 +109,9 @@
             // 
             labelHome_Bemvindo.AutoSize = true;
             labelHome_Bemvindo.Font = new Font("Segoe UI", 40F);
-            labelHome_Bemvindo.Location = new Point(12, 115);
+            labelHome_Bemvindo.Location = new Point(10, 86);
             labelHome_Bemvindo.Name = "labelHome_Bemvindo";
-            labelHome_Bemvindo.Size = new Size(360, 89);
+            labelHome_Bemvindo.Size = new Size(292, 72);
             labelHome_Bemvindo.TabIndex = 1;
             labelHome_Bemvindo.Text = "Bem-vindo";
             // 
@@ -118,9 +119,9 @@
             // 
             labelHome_NomeUsuario.AutoSize = true;
             labelHome_NomeUsuario.Font = new Font("Segoe UI", 40F);
-            labelHome_NomeUsuario.Location = new Point(12, 204);
+            labelHome_NomeUsuario.Location = new Point(10, 153);
             labelHome_NomeUsuario.Name = "labelHome_NomeUsuario";
-            labelHome_NomeUsuario.Size = new Size(471, 89);
+            labelHome_NomeUsuario.Size = new Size(381, 72);
             labelHome_NomeUsuario.TabIndex = 2;
             labelHome_NomeUsuario.Text = "nome_usuario!";
             // 
@@ -129,40 +130,44 @@
             dataGridView_Clientes.AllowUserToAddRows = false;
             dataGridView_Clientes.AllowUserToDeleteRows = false;
             dataGridView_Clientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_Clientes.Location = new Point(12, 77);
+            dataGridView_Clientes.Location = new Point(10, 58);
+            dataGridView_Clientes.Margin = new Padding(3, 2, 3, 2);
             dataGridView_Clientes.Name = "dataGridView_Clientes";
             dataGridView_Clientes.ReadOnly = true;
             dataGridView_Clientes.RowHeadersWidth = 51;
-            dataGridView_Clientes.Size = new Size(776, 361);
+            dataGridView_Clientes.Size = new Size(679, 286);
             dataGridView_Clientes.TabIndex = 3;
             dataGridView_Clientes.Visible = false;
             // 
             // textBox_NewClienteNome
             // 
             textBox_NewClienteNome.Font = new Font("Segoe UI", 12F);
-            textBox_NewClienteNome.Location = new Point(30, 170);
+            textBox_NewClienteNome.Location = new Point(26, 128);
+            textBox_NewClienteNome.Margin = new Padding(3, 2, 3, 2);
             textBox_NewClienteNome.MaxLength = 100;
             textBox_NewClienteNome.Name = "textBox_NewClienteNome";
-            textBox_NewClienteNome.Size = new Size(439, 34);
+            textBox_NewClienteNome.Size = new Size(385, 29);
             textBox_NewClienteNome.TabIndex = 4;
             textBox_NewClienteNome.Visible = false;
             // 
             // label_PaginaAtual
             // 
+            label_PaginaAtual.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label_PaginaAtual.AutoSize = true;
-            label_PaginaAtual.Location = new Point(700, 44);
+            label_PaginaAtual.Location = new Point(13, 31);
             label_PaginaAtual.Name = "label_PaginaAtual";
-            label_PaginaAtual.Size = new Size(88, 20);
+            label_PaginaAtual.Size = new Size(71, 15);
             label_PaginaAtual.TabIndex = 5;
             label_PaginaAtual.Text = "PaginaAtual";
+            label_PaginaAtual.TextAlign = ContentAlignment.MiddleRight;
             // 
             // label_NewClienteNome
             // 
             label_NewClienteNome.AutoSize = true;
             label_NewClienteNome.Font = new Font("Segoe UI", 12F);
-            label_NewClienteNome.Location = new Point(30, 139);
+            label_NewClienteNome.Location = new Point(26, 104);
             label_NewClienteNome.Name = "label_NewClienteNome";
-            label_NewClienteNome.Size = new Size(207, 28);
+            label_NewClienteNome.Size = new Size(163, 21);
             label_NewClienteNome.TabIndex = 6;
             label_NewClienteNome.Text = "Nome do novo cliente";
             label_NewClienteNome.Visible = false;
@@ -171,9 +176,9 @@
             // 
             label_NewClientePerfil.AutoSize = true;
             label_NewClientePerfil.Font = new Font("Segoe UI", 12F);
-            label_NewClientePerfil.Location = new Point(30, 222);
+            label_NewClientePerfil.Location = new Point(26, 166);
             label_NewClientePerfil.Name = "label_NewClientePerfil";
-            label_NewClientePerfil.Size = new Size(146, 28);
+            label_NewClientePerfil.Size = new Size(116, 21);
             label_NewClientePerfil.TabIndex = 7;
             label_NewClientePerfil.Text = "Perfil do cliente";
             label_NewClientePerfil.Visible = false;
@@ -181,9 +186,10 @@
             // button_AdicionarCliente
             // 
             button_AdicionarCliente.Font = new Font("Segoe UI", 20F);
-            button_AdicionarCliente.Location = new Point(510, 174);
+            button_AdicionarCliente.Location = new Point(446, 130);
+            button_AdicionarCliente.Margin = new Padding(3, 2, 3, 2);
             button_AdicionarCliente.Name = "button_AdicionarCliente";
-            button_AdicionarCliente.Size = new Size(268, 108);
+            button_AdicionarCliente.Size = new Size(234, 81);
             button_AdicionarCliente.TabIndex = 9;
             button_AdicionarCliente.Text = "Adicionar Cliente";
             button_AdicionarCliente.UseVisualStyleBackColor = true;
@@ -195,9 +201,10 @@
             comboBox_NewClientePerfil.Font = new Font("Segoe UI", 12F);
             comboBox_NewClientePerfil.FormattingEnabled = true;
             comboBox_NewClientePerfil.Items.AddRange(new object[] { "Conservador", "Moderado", "Agressivo" });
-            comboBox_NewClientePerfil.Location = new Point(30, 248);
+            comboBox_NewClientePerfil.Location = new Point(26, 190);
+            comboBox_NewClientePerfil.Margin = new Padding(3, 2, 3, 2);
             comboBox_NewClientePerfil.Name = "comboBox_NewClientePerfil";
-            comboBox_NewClientePerfil.Size = new Size(439, 36);
+            comboBox_NewClientePerfil.Size = new Size(385, 29);
             comboBox_NewClientePerfil.TabIndex = 10;
             comboBox_NewClientePerfil.Visible = false;
             // 
@@ -205,9 +212,9 @@
             // 
             label_PerfilConservador.AutoSize = true;
             label_PerfilConservador.Font = new Font("Segoe UI", 10F);
-            label_PerfilConservador.Location = new Point(5, 83);
+            label_PerfilConservador.Location = new Point(16, 59);
             label_PerfilConservador.Name = "label_PerfilConservador";
-            label_PerfilConservador.Size = new Size(213, 345);
+            label_PerfilConservador.Size = new Size(169, 285);
             label_PerfilConservador.TabIndex = 11;
             label_PerfilConservador.Text = resources.GetString("label_PerfilConservador.Text");
             // 
@@ -215,9 +222,9 @@
             // 
             label_PerfilModerado.AutoSize = true;
             label_PerfilModerado.Font = new Font("Segoe UI", 10F);
-            label_PerfilModerado.Location = new Point(218, 83);
+            label_PerfilModerado.Location = new Point(203, 59);
             label_PerfilModerado.Name = "label_PerfilModerado";
-            label_PerfilModerado.Size = new Size(270, 345);
+            label_PerfilModerado.Size = new Size(215, 285);
             label_PerfilModerado.TabIndex = 12;
             label_PerfilModerado.Text = resources.GetString("label_PerfilModerado.Text");
             // 
@@ -225,17 +232,17 @@
             // 
             label_PerfilAgressivo.AutoSize = true;
             label_PerfilAgressivo.Font = new Font("Segoe UI", 10F);
-            label_PerfilAgressivo.Location = new Point(484, 83);
+            label_PerfilAgressivo.Location = new Point(436, 59);
             label_PerfilAgressivo.Name = "label_PerfilAgressivo";
-            label_PerfilAgressivo.Size = new Size(310, 345);
+            label_PerfilAgressivo.Size = new Size(248, 285);
             label_PerfilAgressivo.TabIndex = 13;
             label_PerfilAgressivo.Text = resources.GetString("label_PerfilAgressivo.Text");
             // 
             // TelaMenu
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(700, 351);
             Controls.Add(label_PerfilAgressivo);
             Controls.Add(label_PerfilModerado);
             Controls.Add(label_PerfilConservador);
@@ -250,6 +257,7 @@
             Controls.Add(labelHome_Bemvindo);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "TelaMenu";
             Text = "Menu";
             menuStrip1.ResumeLayout(false);

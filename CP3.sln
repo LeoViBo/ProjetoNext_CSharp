@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36109.1 d17.14
+VisualStudioVersion = 17.14.36109.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CP3.Estrutura.UI", "CP3\CP3.Estrutura.UI.csproj", "{16624EA3-40DC-4B0A-ACF2-3CAA76F61243}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CP3.Estrutura.UI", "CP3\CP3.Estrutura.UI.csproj", "{16624EA3-40DC-4B0A-ACF2-3CAA76F61243}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CP3.Estrutura.Controller", "CP3.Estrutura.Controller\CP3.Estrutura.Controller.csproj", "{8BA551AD-16D7-4B6A-A473-CA3AF5435423}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CP3.Estrutura.Controller", "CP3.Estrutura.Controller\CP3.Estrutura.Controller.csproj", "{8BA551AD-16D7-4B6A-A473-CA3AF5435423}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CP3.Estrutura.Model", "CP3.Estrutura.Model\CP3.Estrutura.Model.csproj", "{8B06CF05-F4B7-43F0-9D73-B72EBD20FEC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CP3.Estrutura.Model", "CP3.Estrutura.Model\CP3.Estrutura.Model.csproj", "{8B06CF05-F4B7-43F0-9D73-B72EBD20FEC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CP3.Estrutura.Repository", "CP3.Estrutura.Repository\CP3.Estrutura.Repository.csproj", "{5241A366-2355-48F9-BDDD-FC85FCD76CC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CP3.Estrutura.Repository", "CP3.Estrutura.Repository\CP3.Estrutura.Repository.csproj", "{5241A366-2355-48F9-BDDD-FC85FCD76CC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
