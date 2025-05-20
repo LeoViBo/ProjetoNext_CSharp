@@ -9,7 +9,6 @@ namespace CP3
         public TelaLogin()
         {
             InitializeComponent();
-
         }
 
         private void button_Login_Click(object sender, EventArgs e)
@@ -20,10 +19,9 @@ namespace CP3
             {
                 MessageBox.Show("Login realizado com sucesso!");
                 TelaMenu menu = new TelaMenu(controller.pegarUsuarioNome());
-                menu.Show();       // Abre a nova janela
-                this.Hide();       // Oculta a tela de login
+                menu.Show();
+                this.Hide();
 
-                // Encerra tudo quando TelaMenu for fechada
                 menu.FormClosed += (s, args) => this.Close();
             }
             else
