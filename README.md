@@ -15,33 +15,37 @@ Regras de Negócio
 ## Descrição das Telas
 ### Tela de Login
 
-- Inputs: RM, Senha  
-- Ação: Autentica o usuário.  
-- Validação com mensagem em caso de falha.  
-- Em caso de sucesso, abre a tela do menu.
+- Inputs: RM, Senha (Ambos TextBox)  
+- Ação: Autentica o usuário baseado em usuarios na base de dados.  
+- Validação com mensagem em caso de falha em forma de Label.  
+- Em caso de sucesso, mostra mensagem e abre a tela do menu.  
 - Login cadastrado
   - RM: 551726
   - Senha: 200398
 
 ### Tela de Menu Principal
 
-- Saudação ao usuário logado.  
-- Menu com as opções:  
-  - Home  
+- Menu com as opções (menu strip):  
+  - Home (Pagina de abertura)  
   - Ver Clientes  
   - Adicionar Cliente  
-  - Informações sobre Perfis  
+  - Informações sobre Perfil 
   - Sair  
 
+#### Home
+- Pega o nome de quem fez o login baseado no rm colocado para acessar a aplicação.
+
 #### Tela de Visualização de Clientes
-Exibe uma tabela (DataGridView) com os clientes cadastrados.  
+- Exibe uma tabela (DataGridView) com os clientes cadastrados.
+- Pega os dados da base de dados.
 
 #### Tela de Adição de Cliente
-Inputs: Nome do Cliente, Perfil (seleção por ComboBox)  
-Botão para confirmar o cadastro.
+- Inputs: Nome do Cliente (TextBox) , Perfil (seleção por ComboBox)  
+- Botão para confirmar o cadastro.
+- Cadastra cliente na base de dados.  
 
 #### Tela de Informações sobre Perfis
-Explicação textual sobre os tipos de perfil de investimento.
+- Explicação textual sobre os tipos de perfil de investimento.  
 
 ## Oracle Database: Estrutura das Tabelas
 
@@ -51,14 +55,14 @@ Explicação textual sobre os tipos de perfil de investimento.
 | ID | NUMBER	| PRIMARY KEY |
 | RM | NUMBER	| NOT NULL |
 | Nome | VARCHAR2(100)	| NOT NULL |
-| Senha	| VARCHAR2(20) | NOT NULL |
+| Senha	| VARCHAR2(10) | NOT NULL |
 
 ### Tabela: Clientes
 | Coluna | Tipo de dado	| Restrições |
 | ------ | ------------ | ----------- |
 | ID | NUMBER	| PRIMARY KEY |
 | Nome | VARCHAR2(100) | NOT NULL |
-| Perfil | VARCHAR2(20) | NOT NULL |
+| Perfil | VARCHAR2(100) | NOT NULL |
 
 ## Diagrama do Fluxo de Arquitetura
 
@@ -79,10 +83,10 @@ Oracle Database (Tabelas: Usuarios, Clientes)
 
 ## Tecnologias Utilizadas
 
-- Linguagem: C#  
+- Linguagem: C#, SQL  
 - Framework: Windows Forms (.NET Framework)  
-- Banco de Dados: Oracle 11g  
-- IDE: Visual Studio  
+- Banco de Dados: Oracle Database  
+- IDE: Visual Studio, DBeaver   
 - Gerenciamento de Projeto: Git + GitHub  
 
 ## Pontos de Melhoria para o 2º Semestre
